@@ -10,49 +10,102 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select time for snack bar"
-        android:textSize="50sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="-350dp"
-        android:padding="30sp"
+        android:padding="10sp"
+        android:id="@+id/tvText"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SHORT"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:id="@+id/btnShort"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tvText"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LONG"
-        android:textSize="50dp"
+        android:textSize="30dp"
         android:id="@+id/btnLong"
-        android:layout_marginTop="200sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnShort" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="INDEFINITE"
-        android:textSize="50dp"
-        android:layout_marginTop="400sp"
+        android:textSize="30sp"
         android:id="@+id/btnIndefinite"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnLong" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:padding="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIndefinite"
+        android:id="@+id/tvDisplayNumber"
+        />
+
+   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="null"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:inputType="text"
+        android:padding="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnMultipleSelection"
+        android:id="@+id/tvDisplayData"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alert"
+        android:textSize="30sp"
+        android:id="@+id/btnAlertDialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplayNumber"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alert Selection"
+        android:textSize="30sp"
+        android:id="@+id/btnAlertSelection"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlertDialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Multiple selection"
+        app:layout_constraintTop_toBottomOf="@id/btnAlertSelection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/btnMultipleSelection"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
